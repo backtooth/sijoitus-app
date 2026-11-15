@@ -23,7 +23,22 @@ function render(){
   const info=element('div','company-info'),link=element('a','',s.name);link.href='https://finance.yahoo.com/quote/'+encodeURIComponent(s.symbol)+'/';link.target='_blank';link.rel='noopener';info.append(link,element('small','',s.symbol+' · '+(s.market==='US'?'USA':'Suomi')));company.append(info);
   const price=element('div','price',money(s.price,s.currency));price.append(element('small','',date(s.date)));
   const dip=element('div','dip');dip.append(element('strong','',percent(s.dips[period].dip)),element('small','',({week:'1 viikon',month:'1 kuukauden',quarter:'3 kuukauden'})[period]+' huipusta'));
-  row.append(company,price,spark(s.history),dip);$('stocks').append(row);
+  row.append(company,price,spark(s.history),dip);
+  const reason=s.reasons?.[period];
+  const context=element('div','dip-reason'+(!reason || reason.status==='unknown'?' uncertain':''));
+  const label=reason?.status==='reviewed'?'TODENNÄKÖINEN SYY · LÄHTEISIIN PERUSTUVA ARVIO':reason?.status==='headline'?'MAHDOLLINEN SYY · OTSIKKOTULKINTA':'SYY EI VARMISTUNUT';
+  context.append(element('span','reason-label',label),element('p','',reason?.summary||'Syytä ei ole vielä arvioitu tässä päivityksessä.'));
+  const sources=element('div','reason-sources');
+  for(const source of reason?.sources||[]){
+   try{if(new URL(source.url).protocol!=='https:')continue;}catch{continue;}
+   const item=element('span','reason-source');
+   const a=element('a','',source.publisher+' · '+date(source.publishedAt)+' ↗');a.href=source.url;a.title=source.title;a.target='_blank';a.rel='noopener';item.append(a);
+   if(reason.status==='headline'){const words=source.title.split(/\s+/);item.append(element('span','reason-headline',words.slice(0,20).join(' ')+(words.length>20?'…':'')));}
+   sources.append(item);
+  }
+  if(reason?.status==='headline')sources.append(element('span','','Automaattinen tulkinta uutisotsikosta.'));
+  if(reason?.checkedAt)sources.append(element('span','','Tarkistettu '+date(reason.checkedAt)));
+  context.append(sources);row.append(context);$('stocks').append(row);
  });
 }
 document.querySelectorAll('#markets button').forEach(b=>b.addEventListener('click',()=>{market=b.dataset.value;document.querySelectorAll('#markets button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));if(data)render();}));

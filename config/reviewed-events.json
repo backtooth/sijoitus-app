@@ -1,0 +1,149 @@
+[
+  {
+    "symbol": "RDDT",
+    "eventDate": "2026-10-30",
+    "checkedAt": "2026-11-15T12:26:00Z",
+    "validUntil": "2026-12-14",
+    "summary": "Googlen tekoälyhaku vähentää Redditiin tulevaa liikennettä. Heikko käyttäjä- ja kasvuohjeistus painoi osaketta tulosjulkistuksen jälkeen.",
+    "sources": [
+      {
+        "publisher": "PC Gamer",
+        "title": "Reddit will switch to a logged-in only experience",
+        "url": "https://www.pcgamer.com/software/ai/reddit-will-switch-to-a-logged-in-only-experience/",
+        "publishedAt": "2026-10-29"
+      }
+    ]
+  },
+  {
+    "symbol": "INTC",
+    "eventDate": "2026-10-30",
+    "checkedAt": "2026-11-15T12:26:00Z",
+    "validUntil": "2026-12-14",
+    "summary": "Loppuvuoden tulosohjeistus jäi selvästi markkinaodotuksista. Tulosjulkistusta seurasi lähes 29 prosentin päiväromahdus.",
+    "sources": [
+      {
+        "publisher": "Yahoo Finance",
+        "title": "Intel stock plunges nearly 29%, its worst day since 1974",
+        "url": "https://ca.finance.yahoo.com/news/intel-stock-plunges-nearly-29-its-worst-day-since-1974-205955309.html",
+        "publishedAt": "2026-10-30"
+      }
+    ]
+  },
+  {
+    "symbol": "MRVL",
+    "eventDate": "2026-11-02",
+    "checkedAt": "2026-11-15T12:26:00Z",
+    "validUntil": "2026-12-14",
+    "summary": "Lumentum-yrityskaupan arvostus ja toteutusriskit ovat huolestuttaneet sijoittajia. Samanaikainen AI-sirusektorin myyntipaine voi voimistaa laskua.",
+    "sources": [
+      {
+        "publisher": "Investing.com",
+        "title": "Marvell stock falls on Lumentum deal concerns",
+        "url": "https://ca.investing.com/news/stock-market-news/marvell-stock-falls-on-lumentum-deal-concerns-william-blair-reiterates-outperform-93CH-4923030",
+        "publishedAt": "2026-11-02"
+      }
+    ]
+  },
+  {
+    "symbol": "SNDK",
+    "eventDate": "2026-11-05",
+    "checkedAt": "2026-11-15T12:26:00Z",
+    "validUntil": "2026-12-14",
+    "summary": "AI-investointien sääntelyhuolet ja muistisirusektorin myyntiaalto ovat painaneet osaketta. Myös analyytikoiden suositus- ja tavoitehintaleikkaukset ovat lisänneet painetta.",
+    "sources": [
+      {
+        "publisher": "Investing.com",
+        "title": "Why is SanDisk stock tumbling today?",
+        "url": "https://www.investing.com/news/stock-market-news/why-is-sandisk-stock-tumbling-today-93CH-5005030",
+        "publishedAt": "2026-11-05"
+      }
+    ]
+  },
+  {
+    "symbol": "LAMOR.HE",
+    "eventDate": "2026-11-06",
+    "checkedAt": "2026-11-15T12:26:00Z",
+    "validUntil": "2026-12-14",
+    "summary": "Suurten asiakashankkeiden viivästyminen heikensi tulosta ja tilauskantaa. Lisäksi rahoituksen vahvistamiseen tarvittava suunnattu osakeanti voi laimentaa omistusta.",
+    "sources": [
+      {
+        "publisher": "Lamor",
+        "title": "Liiketoimintakatsaus Q3/2026",
+        "url": "https://storage.mfn.se/def99999-df9a-461c-a2f3-2003d43484fc/lamor-liiketoimintakatsaus-q3-2026.pdf",
+        "publishedAt": "2026-11-06"
+      },
+      {
+        "publisher": "Lamor",
+        "title": "Osakeanti 2026 ja rahoitusjärjestelyt",
+        "url": "https://www.lamor.com/fi/sijoittajat/osakkeet-ja-kaupankaynti/osakeanti-2026",
+        "publishedAt": "2026-10-23"
+      }
+    ]
+  },
+  {
+    "symbol": "NVDA",
+    "eventDate": "2026-11-12",
+    "checkedAt": "2026-11-15T12:26:00Z",
+    "validUntil": "2026-12-14",
+    "summary": "Toimitusjohtaja Jensen Huangin ero ja johtoon kohdistuva skandaali ovat lisänneet epävarmuutta yhtiön hallinnosta ja seuraajajärjestelyistä.",
+    "sources": [
+      {
+        "publisher": "NVIDIA",
+        "title": "Jensen Huang resigns; Colette Kress named interim CEO",
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001045810/2bc9480b-60a6-4d8a-90cb-87190f804a3b.pdf",
+        "publishedAt": "2026-11-12"
+      },
+      {
+        "publisher": "Axios",
+        "title": "Jensen Huang's implosion leaves trail of collateral damage",
+        "url": "https://www.axios.com/2026/11/12/jensen-huang-nvidia-ceo-ai-resignation",
+        "publishedAt": "2026-11-12"
+      }
+    ]
+  },
+  {
+    "symbol": "SOLWERS.HE",
+    "eventDate": "2026-11-12",
+    "checkedAt": "2026-11-15T12:26:00Z",
+    "validUntil": "2026-12-14",
+    "summary": "Kolmannen neljänneksen kannattavuus painui tappiolle ja liikevaihto laski. Tulosvaroitus sekä riski lainakovenantin rikkoutumisesta lisäävät rahoitushuolia.",
+    "sources": [
+      {
+        "publisher": "Solwers",
+        "title": "Business Review January–September 2026",
+        "url": "https://mb.cision.com/Main/20584/4423163/4368343.pdf",
+        "publishedAt": "2026-11-12"
+      }
+    ]
+  },
+  {
+    "symbol": "OUT1V.HE",
+    "eventDate": "2026-11-06",
+    "checkedAt": "2026-11-15T12:26:00Z",
+    "validUntil": "2026-12-14",
+    "summary": "Heikko Euroopan kysyntä, laskevat toimitusmäärät ja nousevat kustannukset heikentävät loppuvuoden näkymiä. Tämä voi selittää tulosjulkistuksen jälkeistä laskua.",
+    "sources": [
+      {
+        "publisher": "Outokumpu",
+        "title": "Q3/2026 interim report and Q4 outlook",
+        "url": "https://www.outokumpu.com/en/news/2026/outokumpu-interim-report-january%E2%80%93september-2026-%E2%80%93-solid-third-quarter-profitability-and-evolve-strategy-progressing-well-3810941",
+        "publishedAt": "2026-11-06"
+      }
+    ]
+  },
+  {
+    "symbol": "VINCIT.HE",
+    "eventDate": "2026-10-21",
+    "checkedAt": "2026-11-15T12:26:00Z",
+    "validUntil": "2026-12-05",
+    "summary": "Liikevaihdon 12,3 prosentin lasku ja tappiollinen oikaistu EBITA kertovat tuloskäänteen viivästymisestä. Heikko raportti voi painaa osakkeen arvostusta.",
+    "sources": [
+      {
+        "publisher": "Vincit / MFN",
+        "title": "Liiketoimintakatsaus 1.1.–30.9.2026: Tuloskäänne vaatii lisää kaupallisia onnistumisia",
+        "url": "https://www.mfn.news/ind/a/vincit/vincit-oyj-liiketoimintakatsaus-1-1-30-9-2026-tuloskaanne-vaatii-lisaa-kaupallisia-onnistumisia-d155c94c",
+        "publishedAt": "2026-10-21"
+      }
+    ]
+  }
+]

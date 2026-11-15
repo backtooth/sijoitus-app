@@ -1,5 +1,6 @@
 import {readFile, writeFile, mkdir, rename} from 'node:fs/promises';
 import {analyze} from './metrics.mjs';
+import {enrichReasons} from './reasons.mjs';
 const OUTPUT = 'public/data/stocks.json';
 const sleep = ms => new Promise(r=>setTimeout(r,ms));
 async function get(url) {
@@ -51,7 +52,9 @@ const coverage = Object.fromEntries(['US','FI'].map(m=>[m,{expected:universe.fil
 // Abort rather than publish misleading rankings when an entire feed is unavailable.
 for(const m of ['US','FI']) if(coverage[m].received < coverage[m].expected*.65) throw new Error(`Insufficient ${m} coverage: ${JSON.stringify(coverage[m])}`);
 await mkdir('public/data',{recursive:true});
-const payload={updatedAt:new Date().toISOString(),source:'Yahoo Finance',coverage,failures,stocks:stocks.sort((a,b)=>a.symbol.localeCompare(b.symbol))};
+const reviewed=JSON.parse(await readFile('config/reviewed-events.json','utf8'));
+const reasonCoverage=await enrichReasons(stocks,reviewed);
+const payload={updatedAt:new Date().toISOString(),source:'Yahoo Finance',coverage,failures,reasonCoverage,stocks:stocks.sort((a,b)=>a.symbol.localeCompare(b.symbol))};
 await writeFile(OUTPUT+'.tmp',JSON.stringify(payload));
 await rename(OUTPUT+'.tmp',OUTPUT);
 console.log(`Updated ${stocks.length}/${universe.length} stocks`);

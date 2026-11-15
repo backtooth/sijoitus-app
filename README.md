@@ -9,6 +9,17 @@ Suomenkielinen, responsiivinen osakedippien seula. GitHub Pages julkaisee staatt
 - Dippi = viimeisin oikaistu päätöskurssi / jakson korkein oikaistu päätöskurssi − 1. Ikkunaan sisältyy vertailupäivä ja seuraavat N havaintoa.
 - Kolmen kuukauden hintakäyrä, viimeisin oikaisematon kurssi, hintapäivä ja linkki yhtiön tietoihin.
 - Puuttuvan datan kattavuus ja yli 36 tuntia vanhan päivityksen varoitus.
+- Jokaisen top 5 -osakkeen alla dipin todennäköinen tai mahdollinen syy, lähdelinkit ja päivämäärät.
+
+## Dipin syyarviot
+
+Jokainen datapäivitys hakee Yahoo Financen uutisotsikot kaikkien markkina- ja aikavälivalintojen top 5 -osakkeiden yhdisteelle. Uutishaku tehdään Actionsissa; selaimesta ei lähetetä uutispyyntöjä eikä API-avainta tarvita.
+
+`config/reviewed-events.json` sisältää lähteistä tarkistettuja suomenkielisiä tapahtumakuvauksia. Niissä on tapahtumapäivä, tarkistusaika, viimeinen voimassaolopäivä ja alkuperäislähteet. Näitä kuvauksia ylläpidetään toimituksellisesti; ajastus ei kirjoita uusia vapaita yhteenvetoja. Vanhentuneita tai valitun laskujakson huippua edeltäviä tapahtumia ei käytetä syynä.
+
+Jos sopivaa tarkistettua tapahtumaa ei ole, sääntöpohjainen luokittelu etsii yhtiön nimeä/tunnusta ja kielteistä tapahtumaa saman uutisotsikon sisältä. Sivulla tämä merkitään **mahdolliseksi syyksi / otsikkotulkinnaksi**, alkuperäinen otsikko näytetään lyhennettynä ja linkitetään lähteeseen. Pelkkä uutinen tai ajallinen yhteys ei todista syy-seuraussuhdetta. Otsikkohaku ei lue koko artikkelia eikä vahvista sen väitteitä. Uutisen pitää ajoittua valitun jakson kurssihuipun jälkeen; haku jättää tulevat ja liian myöhään julkaistut uutiset pois.
+
+Jos perusteltua syytä ei löydy, kortissa lukee **Syy ei varmistunut**. Uutislähteen häiriö merkitään erikseen eikä se estä kurssien julkaisua. Uutislähteen kattavuus erityisesti Suomen pienyhtiöissä on rajallinen. Tarkistetut tapahtumat on uusittava tai korvattava niiden vanhetessa; vanhaa tarinaa ei esitetä automaattisesti uuden laskun selityksenä.
 
 ## Seuranta ja rajoitukset
 
